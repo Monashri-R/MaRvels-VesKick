@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071326">
+    <meta name="description" content="MaRvels VesKick — spend time with your soulmate. Play Tic Tac Toe and Bingo together.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>MaRvels VesKick</title>
+</head>
+
+<body class="home-page">
+
+    <div class="night-overlay" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="brand">
+            <h1 class="brand-title">
+                <span class="big-letter">M</span><span class="small-letters">a</span><span class="big-letter">R</span><span class="small-letters">vels</span>
+                <span class="big-letter">V</span><span class="small-letters">es</span><span class="big-letter">K</span><span class="small-letters">ick</span>
+            </h1>
+
+            <p class="tagline">spend time with your soulmate</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <p class="eyebrow">✦ YOUR MAGICAL GAME NIGHT ✦</p>
+
+            <h2>Choose Your Adventure</h2>
+
+            <p class="welcome-text">
+                Two games. Endless fun. Make every moment count.
+            </p>
+        </section>
+
+        <!-- GAME CARDS -->
+        <section class="games" aria-label="Choose a game">
+
+            <!-- TIC TAC TOE -->
+            <a class="game game-tic" href="tictactoe.html?mode=pass">
+
+                <div class="game-art tic-art" aria-hidden="true">
+
+                    <div class="tic-board">
+                        <span class="symbol-x">×</span>
+                        <span class="symbol-o">○</span>
+                        <span class="symbol-x">×</span>
+
+                        <span class="symbol-o">○</span>
+                        <span class="symbol-x">×</span>
+                        <span class="symbol-o">○</span>
+
+                        <span class="symbol-x">×</span>
+                        <span class="symbol-o">○</span>
+                        <span class="symbol-x">×</span>
+                    </div>
+
+                </div>
+
+                <div class="game-info">
+
+                    <span class="game-number">
+                        01 · THE CLASSIC
+                    </span>
+
+                    <h3>Tic Tac Toe</h3>
+
+                    <p>Think smart. Make your move.</p>
+
+                    <span class="play-button">
+                        PLAY NOW <span aria-hidden="true">↗</span>
+                    </span>
+
+                </div>
+
+            </a>
+
+            <!-- BINGO -->
+            <a class="game game-bingo" href="bingo.html?mode=pass">
+
+                <div class="game-art bingo-art" aria-hidden="true">
+
+                    <div class="bingo-board">
+
+                        <div class="bingo-letters">
+                            <span>B</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                            <span>O</span>
+                        </div>
+
+                        <div class="bingo-numbers">
+                            <span>3</span>
+                            <span>8</span>
+                            <span>12</span>
+                            <span>19</span>
+                            <span>24</span>
+
+                            <span>2</span>
+                            <span>7</span>
+                            <span>14</span>
+                            <span>18</span>
+                            <span>22</span>
+
+                            <span>1</span>
+                            <span>9</span>
+                            <span class="marked">★</span>
+                            <span>17</span>
+                            <span>25</span>
+
+                            <span>5</span>
+                            <span>6</span>
+                            <span>13</span>
+                            <span>20</span>
+                            <span>23</span>
+
+                            <span>4</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span>16</span>
+                            <span>21</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- EXTRA SPACE ADDED THROUGH CSS -->
+                <div class="game-info">
+
+                    <span class="game-number">
+                        02 · THE NUMBER CHALLENGE
+                    </span>
+
+                    <h3>Bingo</h3>
+
+                    <p>Match the numbers. Win together.</p>
+
+                    <span class="play-button">
+                        PLAY NOW <span aria-hidden="true">↗</span>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <span class="footer-star" aria-hidden="true">✧</span>
+
+            In a world full of moments, my favourite ones are with you. ❤️
+
+            <span class="footer-star" aria-hidden="true">✧</span>
+        </footer>
+
+    </main>
+
+</body>
+</html>

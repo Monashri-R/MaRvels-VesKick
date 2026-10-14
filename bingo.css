@@ -1,0 +1,325 @@
+/* ==========================
+   MOONSVPLAY BINGO CSS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#101522;
+    color:white;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.top-bar{
+    height:55px;
+    background:#1b2235;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 15px;
+    border-bottom:2px solid #2f3d5e;
+}
+
+.back-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.top-bar h1{
+    font-size:20px;
+}
+
+#modeName{
+    background:#394867;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:13px;
+}
+
+/* ==========================
+   PASS PLAY
+========================== */
+
+#passPlayContainer{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    height:calc(100vh - 120px);
+}
+
+.player1-area{
+    transform:rotate(180deg);
+}
+
+/* ==========================
+   PLAYER SECTION
+========================== */
+
+.player-section{
+    width:95%;
+    max-width:320px;
+    margin:3px auto;
+}
+
+.player-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:4px;
+}
+
+.player-header h2{
+    font-size:18px;
+}
+
+.bingo-word{
+    font-size:18px;
+    font-weight:bold;
+    color:#FFD700;
+}
+
+/* ==========================
+   TURN
+========================== */
+
+.turn-box{
+    width:90%;
+    margin:4px auto;
+    background:#25324d;
+    padding:6px;
+    border-radius:10px;
+    text-align:center;
+}
+
+#turnText{
+    color:#00ffcc;
+    font-size:18px;
+}
+
+/* ==========================
+   BOARD
+========================== */
+
+.board{
+    display:grid;
+    grid-template-columns:repeat(5,46px);
+    grid-template-rows:repeat(5,46px);
+    gap:3px;
+    justify-content:center;
+    background:#1b2235;
+    padding:6px;
+    border-radius:12px;
+}
+
+.cell{
+    width:46px;
+    height:46px;
+    background:#2b3550;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.cell:hover{
+    transform:scale(1.03);
+}
+
+.cell.marked{
+    background:#16a34a;
+    color:white;
+}
+
+/* Disable inactive board */
+
+.board.disabled{
+    pointer-events:none;
+    opacity:0.5;
+}
+
+.board.active{
+    pointer-events:auto;
+    opacity:1;
+}
+/* ==========================
+   INFO BOX
+========================== */
+
+.info-box{
+    width:90%;
+    max-width:320px;
+    margin:6px auto;
+    text-align:center;
+    background:#25324d;
+    padding:8px;
+    border-radius:10px;
+    font-size:18px;
+}
+
+#currentNumber{
+    color:#FFD700;
+    font-weight:bold;
+}
+
+/* ==========================
+   SINGLE PLAYER
+========================== */
+
+#singleBoardContainer{
+    width:95%;
+    max-width:320px;
+    margin:10px auto;
+}
+
+/* ==========================
+   WINNER POPUP
+========================== */
+
+.winner-popup{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    z-index:99999;
+}
+
+.winner-card{
+    width:90%;
+    max-width:320px;
+    background:#1b2235;
+    border:2px solid gold;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    animation:popup .3s ease;
+}
+
+.winner-card h1{
+    color:#FFD700;
+    margin-bottom:12px;
+    font-size:26px;
+}
+
+.winner-card p{
+    font-size:18px;
+    margin-bottom:18px;
+}
+
+.winner-card button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#playAgainBtn{
+    background:#00c853;
+    color:white;
+}
+
+.winner-card button:last-child{
+    background:#1976d2;
+    color:white;
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+#loadingScreen{
+    position:fixed;
+    inset:0;
+    background:#101522;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+}
+
+#loadingScreen h2{
+    color:#FFD700;
+    font-size:26px;
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:600px){
+
+    .board{
+        grid-template-columns:repeat(5,42px);
+        grid-template-rows:repeat(5,42px);
+    }
+
+    .cell{
+        width:42px;
+        height:42px;
+        font-size:14px;
+    }
+
+    .player-header h2{
+        font-size:16px;
+    }
+
+    .bingo-word{
+        font-size:16px;
+    }
+
+    #turnText{
+        font-size:16px;
+    }
+
+    .info-box{
+        font-size:16px;
+        padding:6px;
+    }
+
+    .top-bar{
+        height:50px;
+    }
+
+    .top-bar h1{
+        font-size:18px;
+    }
+}
